@@ -1,13 +1,24 @@
-{% extends "hello2.html" %}
+{% comment %} {% extends "hello2.html" %} {% endcomment %}
 {% block content %}
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro of mine</title>
+    <link rel="stylesheet" type="text/css" href="{%static 'playcss/hello.css'%}">
+</head>
+<body>
+    <h1 class ="hel">Hello I am Rachit Poudel {{address}}</h1>
 
-<h1>Hello I am Rachit Poudel {{address}}</h1>
-
-<form action="add" method ="post">
- {% csrf_token %}
- 
-    Enter  1st Number : <input type="text" name="num1"><br>
-    Enter  2nd Number : <input type="text" name="num2"><br>
-    <input type="submit">
-</form>
-{% endblock %}
+    <form action="add" method ="post">
+    {% csrf_token %}
+    
+        Enter  1st Number : <input type="text" name="num1"><br>
+        Enter  2nd Number : <input type="text" name="num2"><br>
+        <input type="submit">
+    </form>
+</bpdy>
+</html>
+    {% endblock %}
