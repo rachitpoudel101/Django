@@ -1,6 +1,6 @@
-{% comment %} {% extends "hello2.html" %} {% endcomment %}
+{% extends "hello2.html" %}
 {% block content %}
-{%load static %}
+{%load static %} 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +20,67 @@
         <input type="submit">
     </form>
     <img src="{%static 'image/ktm.jpg'%}" alt="ktm" class="ktm">
+    <img src="{%static 'image/camara.png'%}" alt="camaera" class="ktm">
 </bpdy>
 </html>
-    {% endblock %}
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple Page with Image and Navbar</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                background-color: #333;
+                color: #fff;
+                padding: 10px 0;
+                text-align: center;
+            }
+            nav {
+                background-color: #444;
+                overflow: hidden;
+            }
+            nav a {
+                float: left;
+                display: block;
+                color: #fff;
+                text-align: center;
+                padding: 14px 20px;
+                text-decoration: none;
+            }
+            nav a:hover {
+                background-color: #555;
+            }
+            main {
+                padding: 20px;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Simple Page with Image and Navbar</h1>
+        </header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+        <main>
+            <img src="{%static 'image/camara.png'%}" alt="camaera" class="ktm">
+        </main>
+    </body>
+    </html> 
+    {% endblock %} 
+    
